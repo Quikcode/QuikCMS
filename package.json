@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "react:dev": "vite ./src/frontend",
-    "react:build": "vite build ./src/frontend",
-    "react:preview": "vite preview ./src/frontend",
+    "react:dev": "vite src/ui",
+    "react:build": "vite build src/ui",
+    "react:preview": "vite preview src/ui",
     "go:run": "go run .",
     "go:build": "go build .",
     "build": "yarn react:build && yarn go:build"
