@@ -1,15 +1,15 @@
 package handlers
 
 import (
-	"QuikCMS/src/core/controllers"
+	"QuikCMS/src/core/controllers/config"
 	"QuikCMS/src/utils"
 	"github.com/gin-gonic/gin"
 )
 
-func CheckConfig(c *gin.Context)  {
+func CheckConfig(c *gin.Context) {
 	path := utils.Files{Path: "./quickCMS.json"}
 
-	if !controllers.CheckConfig(&path){
+	if !config.CheckConfig(&path) {
 		c.String(404, "Incorrect")
 	}
 

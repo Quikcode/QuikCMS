@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"fmt"
 	"os"
 )
 
@@ -24,6 +25,10 @@ func (i Files) Write(data string) {
 	file.WriteString(data)
 }
 
-func (i Files) Read()  {
-
+func (i Files) Read() *os.File {
+	file, err := os.Open(i.Path)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	return file
 }
